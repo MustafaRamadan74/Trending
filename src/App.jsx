@@ -13,7 +13,7 @@ import { useState } from 'react';
 import jwtDecode from 'jwt-decode';
 import { useEffect } from 'react';
 import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
-import {ErrorPage} from './Components/ErrorPage/ErrorPage';
+import ErrorPage from './Components/ErrorPage/ErrorPage';
 
 function App() {
 
@@ -34,7 +34,7 @@ function App() {
 
   let routers = createBrowserRouter([
     {
-      path: "/", element: <Layout setUserData={setUserData} userData={userData} />, children: [
+      path: "Trending", element: <Layout setUserData={setUserData} userData={userData} />, children: [
         { index: true, element: <ProtectedRoute userData={userData}> <Home /> </ProtectedRoute> },
         { path: "movies", element: <ProtectedRoute userData={userData}> <Movies /> </ProtectedRoute> },
         { path: "people", element: <ProtectedRoute userData={userData}><People /></ProtectedRoute> },
