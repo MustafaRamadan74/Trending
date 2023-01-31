@@ -42,7 +42,7 @@ function App() {
         { path: "tv", element: <ProtectedRoute userData={userData}> <Tv /> </ProtectedRoute> },
         { path: "login", element: <Login saveUserData={saveUserData} /> },
         { path: "register", element: <Register /> },
-        {path:'*', element: <ErrorPage/>}
+        { path: '*', element: <ProtectedRoute userData={userData}> <ErrorPage /> </ProtectedRoute> }
       ]
     }
   ]);
