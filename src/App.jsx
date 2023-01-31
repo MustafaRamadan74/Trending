@@ -34,7 +34,7 @@ function App() {
 
   let routers = createBrowserRouter([
     {
-      path: "*", element: <Layout setUserData={setUserData} userData={userData} />, children: [
+      path: "/", element: <Layout setUserData={setUserData} userData={userData} />, children: [
         { index: true, element: <ProtectedRoute userData={userData}> <Home /> </ProtectedRoute> },
         { path: "movies", element: <ProtectedRoute userData={userData}> <Movies /> </ProtectedRoute> },
         { path: "people", element: <ProtectedRoute userData={userData}><People /></ProtectedRoute> },
@@ -42,7 +42,7 @@ function App() {
         { path: "tv", element: <ProtectedRoute userData={userData}> <Tv /> </ProtectedRoute> },
         { path: "login", element: <Login saveUserData={saveUserData} /> },
         { path: "register", element: <Register /> },
-        // {path:'*', element: <ErrorPage/>}
+        {path:'*', element: <ErrorPage/>}
       ]
     }
   ]);
