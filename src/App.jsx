@@ -35,7 +35,7 @@ function App() {
   let routers = createBrowserRouter([
     {
       path: "/", element: <Layout setUserData={setUserData} userData={userData} />, children: [
-        { path:'*', element: <ProtectedRoute userData={userData}> <Home /> </ProtectedRoute> },
+        { index: true, element: <ProtectedRoute userData={userData}> <Home /> </ProtectedRoute> },
         { path: "movies", element: <ProtectedRoute userData={userData}> <Movies /> </ProtectedRoute> },
         { path: "people", element: <ProtectedRoute userData={userData}><People /></ProtectedRoute> },
         { path: "itemdetails/:id/:media_type", element: <ProtectedRoute userData={userData}> <ItemDetails /> </ProtectedRoute> },
