@@ -72,7 +72,7 @@ export default function Register() {
 
     {errorList.map((err, index) => {
       if (err.context.label === "password") {
-        return <div key={index} className="alert alert-warning my-2">password invalid</div>
+        return <div key={index} className="alert alert-warning my-2">password invalid 'must start with capital letter'</div>
       }
       else {
         return <div key={index} className="alert alert-warning my-2">{err.message}</div>
