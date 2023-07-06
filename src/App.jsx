@@ -1,5 +1,5 @@
 import './App.css';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {  createHashRouter, RouterProvider } from "react-router-dom";
 import Layout from './Components/Layout/Layout';
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
@@ -32,7 +32,7 @@ function App() {
     setUserData(decodedToken);
   }
 
-  let routers = createBrowserRouter([
+  let routers = createHashRouter([
     // {
     //   path: "/", element: <Layout setUserData={setUserData} userData={userData} />, children: [
     //     { index: true, element: <ProtectedRoute userData={userData}> <Home /> </ProtectedRoute> },
